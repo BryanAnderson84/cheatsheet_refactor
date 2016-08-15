@@ -1,0 +1,12 @@
+<h1>Search for Command Manuals</h1>
+
+<form method='POST' action='/search'>
+  <input type='text' placeholder='enter command' name ='message' required />
+  <input type='submit' />
+</form>
+
+<% if @entry %>
+  <h3>Search Results:</h3>
+  <p> <%= `man #{@entry}` %> </p>
+
+<% end %>
